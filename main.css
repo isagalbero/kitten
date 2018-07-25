@@ -1,0 +1,40 @@
+.section{
+    display: grid;
+    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.img{
+    background: url('Image/sunny-day.jpg') center center / cover no-repeat;
+    grid-row: 1 / 4;
+    grid-column: 1 / 7;
+}
+
+.kitten{
+    background: url('Image/kitten-small.png') center center / contain no-repeat;
+    grid-row: 2 / 4;
+    grid-column: 1 / 7;
+
+}
+
+@media screen and (max-width: 900px){
+    .img{
+        background-image: url('Image/night.jpg');
+    }
+    .kitten{
+        background: url('Image/kitten-large.png') center center / contain no-repeat;
+        grid-row: 3 / 4;
+        grid-column: 1 / 7;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .img{
+        background-image: url('Image/dawn.png');
+    }
+    .kitten{
+        background: url('Image/kitten-medium.png') center center / contain no-repeat;
+        grid-row: 3 / 4;
+        grid-column: 1 / 7;
+    }
+}
